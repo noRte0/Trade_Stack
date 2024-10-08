@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Blog" ALTER COLUMN "photo" DROP NOT NULL;

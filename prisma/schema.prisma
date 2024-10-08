@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String?
+  email     String   @unique
+  password  String
+  image     String?
+  role      String   @default("member")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tradeTechniques TradeTechnique[]
+  Blog     Blog[]
+  Comment   Comment[]
+}
+
+model TradeTechnique {
+  id        Int      @id @default(autoincrement())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    Int
+  technique String
+  Contract  String
+  LongShort String
+  Leverage  String
+  lotsize String
+  EntryPrice  String
+  ExitPrice String
+  Pip String
+  Note  String
+  Timeframe String
+  result    String
+  createdAt DateTime @default(now())
+}
+
+model Blog {
+  id        Int      @id @default(autoincrement())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    Int
+  slug      String   @unique
+  product   String
+  about     String
+  photo     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  comments  Comment[] 
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  desc      String
+  userEmail String
+  user      User     @relation(fields: [userEmail], references: [email])
+  blogSlug  String
+  blog      Blog     @relation(fields: [blogSlug], references: [slug])
+}

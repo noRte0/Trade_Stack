@@ -1,0 +1,11 @@
+{
+  "/page": "app/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/blogs/route": "app/api/blogs/route.js",
+  "/techniques/page": "app/techniques/page.js",
+  "/api/techniques-count/route": "app/api/techniques-count/route.js",
+  "/api/graphplot/route": "app/api/graphplot/route.js",
+  "/api/trade-techniques/route": "app/api/trade-techniques/route.js",
+  "/news/page": "app/news/page.js",
+  "/profile/page": "app/profile/page.js"
+}
