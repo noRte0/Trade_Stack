@@ -124,20 +124,92 @@ export default function Techniques_handle() {
                                 {error}
                             </div>
                         )}
-                        <input onChange={(e) => setTechnique(e.target.value)} type="text" className='block bg-gray-300 p-2 mt-1 rounded-md' placeholder='Enter technique' /><br />
-                        <input onChange={(e) => setContract(e.target.value)} type="text" className='block bg-gray-300 p-2 mt-1 rounded-md' placeholder='Enter contract' /><br />
-                        <input onChange={(e) => setLongShort(e.target.value)} type="text" className='block bg-gray-300 p-2 mt-1 rounded-md' placeholder='Enter long/short' /><br />
-                        <input onChange={(e) => setLeverage(e.target.value)} type="text" className='block bg-gray-300 p-2 mt-1 rounded-md' placeholder='Enter leverage' /><br />
-                        <input onChange={(e) => setlotsize(e.target.value)} type="text" className='block bg-gray-300 p-2 mt-1 rounded-md' placeholder='Enter lotsize' /><br />
-                        <input onChange={(e) => setEntryPrice(e.target.value)} type="text" className='block bg-gray-300 p-2 mt-1 rounded-md' placeholder='Enter entry price' /><br />
-                        <input onChange={(e) => setExitPrice(e.target.value)} type="text" className='block bg-gray-300 p-2 mt-1 rounded-md' placeholder='Enter exit price' /><br />
-                        <input onChange={(e) => setPip(e.target.value)} type="text" className='block bg-gray-300 p-2 mt-1 rounded-md' placeholder='Enter pip' /><br />
-                        <input onChange={(e) => setNote(e.target.value)} type="text" className='block bg-gray-300 p-2 mt-1 rounded-md' placeholder='Enter note' /><br />
-                        <input onChange={(e) => setTimeframe(e.target.value)} type="text" className='block bg-gray-300 p-2 mt-1 rounded-md' placeholder='Enter timeframe' /><br />
-                        <input onChange={(e) => setResult(e.target.value)} type="text" className='block bg-gray-300 p-2 mt-1 rounded-md' placeholder='Enter result' /><br />
-                        <button type='submit' className='transition ease-in-out delay-150 bg-white-500 p-2 rounded-full text-black shadow-lg hover:bg-gradient-to-r from-sky-500 to-yellow-500  hover:text-white duration-300 hover:scale-110 '>Save your journey</button>
+                        <input
+                            onChange={(e) => setTechnique(e.target.value)}
+                            type="text"
+                            className='block bg-gray-300 p-2 mt-1 rounded-md'
+                            placeholder='Enter technique'
+                        /><br />
+
+                        <input
+                            onChange={(e) => setContract(e.target.value)}
+                            type="text"
+                            className='block bg-gray-300 p-2 mt-1 rounded-md'
+                            placeholder='Enter contract'
+                        /><br />
+
+                        <select
+                            onChange={(e) => setLongShort(e.target.value)}
+                            className='block bg-gray-300 p-2 mt-1 rounded-md'>
+                            <option value="">Select long/short</option>
+                            <option value="Long">Long</option>
+                            <option value="Short">Short</option>
+                        </select><br />
+
+                        <input
+                            onChange={(e) => setLeverage(e.target.value)}
+                            type="text"
+                            className='block bg-gray-300 p-2 mt-1 rounded-md'
+                            placeholder='Enter leverage'
+                        /><br />
+
+                        <input
+                            onChange={(e) => setlotsize(e.target.value)}
+                            type="text"
+                            className='block bg-gray-300 p-2 mt-1 rounded-md'
+                            placeholder='Enter lotsize'
+                        /><br />
+
+                        <input
+                            onChange={(e) => setEntryPrice(e.target.value)}
+                            type="text"
+                            className='block bg-gray-300 p-2 mt-1 rounded-md'
+                            placeholder='Enter entry price'
+                        /><br />
+
+                        <input
+                            onChange={(e) => setExitPrice(e.target.value)}
+                            type="text"
+                            className='block bg-gray-300 p-2 mt-1 rounded-md'
+                            placeholder='Enter exit price'
+                        /><br />
+
+                        <input
+                            onChange={(e) => setPip(e.target.value)}
+                            type="text"
+                            className='block bg-gray-300 p-2 mt-1 rounded-md'
+                            placeholder='Enter pip'
+                        /><br />
+
+                        <input
+                            onChange={(e) => setNote(e.target.value)}
+                            type="text"
+                            className='block bg-gray-300 p-2 mt-1 rounded-md'
+                            placeholder='Enter note'
+                        /><br />
+
+                        <input
+                            onChange={(e) => setTimeframe(e.target.value)}
+                            type="text"
+                            className='block bg-gray-300 p-2 mt-1 rounded-md'
+                            placeholder='Enter timeframe'
+                        /><br />
+
+                        <select
+                            onChange={(e) => setResult(e.target.value)}
+                            className='block bg-gray-300 p-2 mt-1 rounded-md'>
+                            <option value="">Select result</option>
+                            <option value="win">Win</option>
+                            <option value="lose">Lose</option>
+                            <option value="breakeven">Breakeven</option>
+                        </select><br />
+
+                        <button type='submit' className='transition ease-in-out delay-150 bg-white-500 p-2 rounded-full text-black shadow-lg hover:bg-gradient-to-r from-sky-500 to-yellow-500  hover:text-white duration-300 hover:scale-110'>
+                            Save your journey
+                        </button>
                     </form>
                 </div>
+
                 <hr className='pl-1 bg-gradient-to-t from-sky-500 to-yellow-500 h-dvh w-0' />
                 {/* //------------------------history---------------------------------// */}
                 <div className='container mx-auto py-2 pb-6 flex flex-col items-start h-screen w-screen '>

@@ -58,7 +58,7 @@ export async function GET(request) {
     });
     
     const summary = techniques.reduce((acc, curr) => {
-      
+      // ตั้งชื่อตัวแปรให้เป็น snake_case
       if (!acc[curr.technique]) {
         acc[curr.technique] = { win: 0, breakeven: 0, lose: 0, total: 0, details: [] };
       }
@@ -96,3 +96,4 @@ export async function GET(request) {
     return NextResponse.json({ message: 'Internal server error' }, { status: 500 });
   }
 }
+
